@@ -4,7 +4,7 @@ const IMG_API = "https://image.tmdb.org/t/p/original";
 const Slider = ({ movie }) => {
   console.log(movie);
   return (
-    <Carousel fade autoPlay={true} interval={2000}>
+    <Carousel className="carousel" fade autoPlay={true} interval={2000}>
       {movie.map((img, i) => (
         <Carousel.Item className="d-flex justify-content-center slider" key={i}>
           <img

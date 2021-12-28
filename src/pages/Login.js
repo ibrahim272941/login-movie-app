@@ -20,11 +20,15 @@ const Login = () => {
   };
 
   return (
-    <Container className="my-5 d-flex justify-content-center border w-50 rounded-3">
-      <Form className="w-50 py-5 ">
+    <Container
+      id="login-container"
+      className="mt-5 d-flex justify-content-center border  rounded-3 "
+    >
+      <Form className="w-75">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
+            className=""
             onChange={(e) => setEmail(e.target.value)}
             type="email"
             placeholder="Enter email"
@@ -35,6 +39,7 @@ const Login = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            className=""
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             placeholder="Password"

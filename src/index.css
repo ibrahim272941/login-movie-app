@@ -27,6 +27,7 @@ code {
   margin: 1rem 0;
   box-shadow: 5px 3px 5px rgba(22, 22, 22, 0.568);
   border-radius: 3rem;
+
 }
 
 .slider h3 {
@@ -245,10 +246,12 @@ nav button {
 .button-group {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 1rem;
   box-shadow: 9px 1px 1px rgba(15, 15, 15, 0.9);
 
   background-color: #025c80;
+
 
 }
 
@@ -294,7 +297,16 @@ nav h2 span {
 
   }
 
+  #login-container {
+    width: 70%;
+    padding: 1rem
+  }
 
+  #loginForm {
+    width: 90%;
+    border: 3px solid red;
+
+  }
 }
 
 @media (max-width:1020px) {
@@ -316,5 +328,23 @@ nav h2 span {
     margin-top: 1rem;
 
   }
+
+  #login-container {
+    width: 95%;
+  }
+
+  .carousel {
+    margin: 0 1rem;
+  }
+
+  .slider {
+    height: 20rem;
+    border-radius: 1rem;
+  }
+
+  .slider img {
+    max-height: 100%;
+  }
+
 
 }
