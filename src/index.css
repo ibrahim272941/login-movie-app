@@ -160,8 +160,9 @@ nav button {
   flex-direction: column;
   align-items: center;
   color: white;
-  background-color: #015a69;
-  min-height: 100vh;
+  background-image: linear-gradient(to right, #98dce4, #02343d);
+  height: 100vh;
+  width: 100vw;
 }
 
 .backdrop {
@@ -174,47 +175,46 @@ nav button {
 .trailer-overview {
   display: flex;
   justify-content: flex-start;
+  margin: 0 1rem;
 
-  margin-left: 1rem;
-  width: 100%;
+
 }
 
 .trailer-head {
-  margin-left: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+
 
 }
 
-.icon {
-  padding: 1rem;
-}
 
 .trailer-parag-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
-
-  width: 20rem;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  width: 100%;
   font-size: 1rem;
 
 }
 
-.vote {
-
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  font-weight: 700;
-
+.trailer-title {
+  padding-bottom: 1rem;
 }
 
 
+
+
 .trailer iframe {
-  min-width: 40rem;
-  min-height: 20rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  width: 65%;
+  min-height: 25rem;
+
 }
 
 .search-form {
@@ -248,7 +248,7 @@ nav button {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  box-shadow: 9px 1px 1px rgba(15, 15, 15, 0.9);
+  box-shadow: 1px 1px 1px rgba(15, 15, 15, 0.9);
 
   background-color: #025c80;
 
@@ -270,7 +270,7 @@ nav button {
   letter-spacing: .2rem;
   text-shadow: 1px 1px 2px rgba(7, 6, 6, 0.9);
   font-family: 'Mitr';
-  box-shadow: 1px 2px 3px rgba(7, 6, 6, 0.9);
+  box-shadow: 3px 2px 3px rgba(7, 6, 6, 0.9);
 
 
 
@@ -318,6 +318,52 @@ nav h2 span {
 
   }
 
+  .trailer-overview {
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+
+    margin: 0 1rem;
+
+  }
+
+  .trailer-head {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+
+  }
+
+
+  .trailer-parag-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 4rem 1rem 0 0;
+
+    font-size: 1rem;
+
+
+  }
+
+
+
+
+
+
+  .trailer iframe {
+    margin-top: 6rem;
+    width: 85%;
+    min-height: 18rem;
+
+  }
+
 
 }
 
@@ -339,12 +385,74 @@ nav h2 span {
 
   .slider {
     height: 20rem;
-    border-radius: 1rem;
+
   }
 
   .slider img {
     max-height: 100%;
   }
 
+  .trailer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+  }
+
+  .backdrop {
+    width: 11rem;
+    height: 15rem;
+    box-shadow: 5px -2px 8px rgba(231, 229, 229, 0.568);
+    border-radius: 1rem;
+  }
+
+  .trailer-overview {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    margin: 0;
+
+  }
+
+  .trailer-head {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+
+
+  }
+
+
+  .trailer-parag-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin: .5rem 0 0 0;
+    font-size: .7rem;
+
+
+  }
+
+  .trailer-title {
+    padding-bottom: 1rem;
+  }
+
+
+
+
+  .trailer iframe {
+    margin: 1rem 0;
+    width: 85%;
+    min-height: 12rem;
+
+  }
 
 }
