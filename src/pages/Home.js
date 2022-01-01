@@ -7,7 +7,7 @@ import Slider from "../component/Slider";
 
 const SEARCH_API =
   "https://api.themoviedb.org/3/search/movie?&api_key=0dfeb1e3115d788bdd6ccd6d217d93cf&query=";
-const IMG_API = "https://image.tmdb.org/t/p/original";
+
 const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=0dfeb1e3115d788bdd6ccd6d217d93cf&page=1`;
 
 const Home = () => {
@@ -23,12 +23,12 @@ const Home = () => {
     if (searchTerm) {
       getMovie(SEARCH_API + searchTerm);
     }
-    setSearchTerm("");
+
     console.log(searchTerm);
   };
   const getMovie = async (api) => {
     const { data } = await axios.get(api);
-    console.log(data.results);
+
     setMovie(data.results);
   };
   return (

@@ -7,7 +7,7 @@ const Navbar = () => {
   let navigate = useNavigate();
 
   const { currentUser } = useContext(AuthContext);
-  console.log(currentUser);
+
   const signOutFunc = async () => {
     await signOut(auth);
     navigate("/");

@@ -13,7 +13,7 @@ const Trailer = () => {
   const posterPath = location.state.poster_path;
   const overview = location.state.overview;
   const title = location.state.title;
-  console.log(id);
+
   useEffect(() => {
     getTrailer();
   }, []);
@@ -22,7 +22,7 @@ const Trailer = () => {
     const data = await axios(
       `https://api.themoviedb.org/3/movie/${id}/videos?api_key=0dfeb1e3115d788bdd6ccd6d217d93cf&language=en-US`
     );
-    const result = data.data.results[0];
+    const [result] = data.data.results;
     const key = result.key;
     setTrailer(key);
   };
