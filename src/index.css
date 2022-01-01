@@ -222,7 +222,7 @@ nav button {
   justify-content: space-around;
   align-items: center;
   color: white;
-  background-color: #025c80;
+  background-image: linear-gradient(to right, #98dce4, #02343d);
 
 }
 
@@ -232,7 +232,7 @@ nav button {
 }
 
 .search-form form input {
-  background-color: #01709cbd;
+  background-image: linear-gradient(to right, #98dce4, #02343d);
   width: 100%;
   border: none;
   outline: none;

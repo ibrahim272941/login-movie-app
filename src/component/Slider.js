@@ -2,7 +2,6 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 const IMG_API = "https://image.tmdb.org/t/p/original";
 const Slider = ({ movie }) => {
-  console.log(movie);
   return (
     <Carousel className="carousel" fade autoPlay={true} interval={2000}>
       {movie.map((img, i) => (
