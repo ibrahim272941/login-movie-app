@@ -13,6 +13,7 @@ const Trailer = () => {
   const posterPath = location.state.poster_path;
   const overview = location.state.overview;
   const title = location.state.title;
+  console.log(trailer);
 
   useEffect(() => {
     getTrailer();
@@ -22,8 +23,8 @@ const Trailer = () => {
     const data = await axios(
       `https://api.themoviedb.org/3/movie/${id}/videos?api_key=0dfeb1e3115d788bdd6ccd6d217d93cf&language=en-US`
     );
-    const [result] = data.data.results;
-    const key = result.key;
+    const result = data.data.results;
+    const key = result;
     setTrailer(key);
   };
   return (
@@ -49,15 +50,20 @@ const Trailer = () => {
           <p className="trailer-parag">{overview}</p>
         </div>
       </div>
-
-      <iframe
-        style={trailer ? { display: "block" } : { display: "none" }}
-        src={youtubeUrl + trailer}
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
+      {trailer.map((video, i) => {
+        const { key } = video;
+        return (
+          <iframe
+            key={i}
+            // style={video ? { display: "block" } : { display: "none" }}
+            src={youtubeUrl + key}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        );
+      })}
     </div>
   );
 };
