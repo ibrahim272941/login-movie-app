@@ -45,6 +45,7 @@ code {
   background-image: linear-gradient(to right, #98dce4, #02343d);
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 
 
 
@@ -75,11 +76,11 @@ nav button {
 
 .movie {
   width: 16rem;
-  margin-top: 1rem;
+  margin: 1rem .7rem;
   position: relative;
 
   overflow: hidden;
-  margin-left: 2.5rem;
+
   box-shadow: 5px -2px 8px rgba(231, 229, 229, 0.568);
   background-color: #01788d;
   border-radius: 1rem;
