@@ -13,19 +13,19 @@ const Trailer = () => {
   const posterPath = location.state.poster_path;
   const overview = location.state.overview;
   const title = location.state.title;
-  console.log(trailer);
 
   useEffect(() => {
-    getTrailer();
+    getTrailer(id);
   }, []);
 
-  const getTrailer = async () => {
+  const getTrailer = async (id) => {
     const data = await axios(
       `https://api.themoviedb.org/3/movie/${id}/videos?api_key=0dfeb1e3115d788bdd6ccd6d217d93cf&language=en-US`
     );
-    const result = data.data.results;
-    const key = result;
+    const result = await data.data.results;
+    const key = await result;
     setTrailer(key);
+    console.log(key);
   };
   return (
     <div className="trailer">
@@ -35,35 +35,28 @@ const Trailer = () => {
           <img className="backdrop" src={IMG_API + posterPath} alt="" />
         </div>
         <div className="trailer-parag-div">
-          {/* <div className="vote">
-            <div className="icon">
-              <Icon
-                className="imdb-icon"
-                icon="cib:imdb"
-                color="#f5c518"
-                width="40"
-              />
-            </div>
-            <p>{id.vote_average}</p>
-          </div> */}
           <h4>Overview</h4>
           <p className="trailer-parag">{overview}</p>
         </div>
       </div>
-      {trailer.map((video, i) => {
-        const { key } = video;
-        return (
-          <iframe
-            key={i}
-            // style={video ? { display: "block" } : { display: "none" }}
-            src={youtubeUrl + key}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        );
-      })}
+      {trailer ? (
+        trailer.map((video, i) => {
+          const { key } = video;
+          return (
+            <iframe
+              key={i}
+              style={key ? { display: "block" } : { display: "none" }}
+              src={youtubeUrl + key}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          );
+        })
+      ) : (
+        <p style={{ color: "#000" }}>Please Wait</p>
+      )}
     </div>
   );
 };
