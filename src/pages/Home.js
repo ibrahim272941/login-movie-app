@@ -4,6 +4,7 @@ import axios from "axios";
 
 import MovieCard from "../component/MovieCard";
 import Slider from "../component/Slider";
+import { useLocation } from "react-router-dom";
 
 const SEARCH_API =
   "https://api.themoviedb.org/3/search/movie?&api_key=0dfeb1e3115d788bdd6ccd6d217d93cf&query=";
@@ -13,7 +14,8 @@ const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?sort_by=popula
 const Home = () => {
   const [movies, setMovie] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-
+  const path = useLocation().pathname;
+  console.log(path);
   useEffect(() => {
     getMovie(FEATURED_API);
   }, []);
