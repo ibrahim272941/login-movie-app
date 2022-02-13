@@ -6,6 +6,7 @@ import Trailer from "../pages/Trailer";
 
 import React from "react";
 import Navbar from "../component/Navbar";
+import { auth } from "../auth/firebase-config";
 
 const AppRouter = () => {
   return (
